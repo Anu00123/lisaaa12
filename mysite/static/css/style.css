@@ -1,0 +1,127 @@
+/* Custom CSS styles */ 
+
+.navbar-brand:hover {
+    color: #007bff; /* Change color on hover */
+  }
+
+  .nav-link {
+    position: relative; /* Required for pseudo-element */
+  }
+
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust based on your design */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: transparent;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+
+  .nav-link:hover::before {
+    background-color: yellow; /* Change color on hover */
+  }
+
+  .navbar {
+    background-color: #f8f9fa; /* Change background color here */
+  }  
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .footer {
+    background-color: #e9ecef;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .copyright {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+
+
+
+
+  .box-continer {
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  }
+  
+  .i-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: calc(25% - 40px); /* 25% width with margin included */
+    max-width: 150px; /* Set a maximum width for larger screens */
+    height: 100px;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    margin: 10px; /* Adjusted margin for spacing */
+  }
+  
+  .icon {
+    font-size: 40px; /* Adjust the icon size */
+    margin: 0 10px; /* Add some space between icons */
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .i-box {
+      width: calc(50% - 40px); /* 50% width with margin included */
+    }
+  }
+  
+  /* Media query for even smaller screens */
+  @media screen and (max-width: 480px) {
+    .i-box {
+      width: calc(100% - 40px); /* 100% width with margin included */
+    }
+  }
+  
+
+  
+  
+
+  
+
+
+  .box {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-up {
+    animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
